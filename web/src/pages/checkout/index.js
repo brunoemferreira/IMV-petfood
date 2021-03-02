@@ -7,7 +7,7 @@ import './styles.css';
 const Checkout = () => {
   return (
     <>
-      <Header />
+      <Header hideCart />
       <div className="h-100 ">
         <div className="container mt-4">
           <div className="row">

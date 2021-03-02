@@ -2,8 +2,9 @@ import Logo from '../../assets/logo.png';
 import LogoWhite from '../../assets/logo-white.png';
 
 import './styles.css';
+import { Link } from 'react-router-dom';
 
-const Header = ({ whiteVersion }) => {
+const Header = ({ whiteVersion, hideCart }) => {
   const openDrawer = () => {
     const event = new CustomEvent('openCart');
     window.dispatchEvent(event);
@@ -12,11 +13,13 @@ const Header = ({ whiteVersion }) => {
   return (
     <div className="col-12">
       <header className="py-4 px-4 text-center">
-        <img src={whiteVersion ? LogoWhite : Logo} alt="Logotipo PerFood" className="img-fluid" />
+        <Link to="/">
+          <img src={whiteVersion ? LogoWhite : Logo} alt="Logotipo PerFood" className="img-fluid" />
+        </Link>
       </header>
-      <button onClick={() => openDrawer()} className="btn btn-info cart-button">
+      {!hideCart && <button onClick={() => openDrawer()} className="btn btn-info cart-button">
         <span className="mdi mdi-cart"></span> 2 Ítens
-      </button>
+      </button>}
     </div>
   )
 }

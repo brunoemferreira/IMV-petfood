@@ -43,11 +43,11 @@ input[type='date']:disabled {
 }
 
 .bg-primary {
-  background-color: rgb(var(--primary)) !important;
+  background-color: var(--primary) !important;
 }
 
 .bg-secondary {
-  background-color: rgb(var(--secondary)) !important;
+  background-color: var(--secondary) !important;
 }
 
 .btn-primary,
@@ -64,12 +64,12 @@ input[type='date']:disabled {
 .btn-secondary:active,
 .btn-secondary:disabled,
 .btn-secondary:hover {
-  background-color: rgb(var(--secondary)) !important;
-  border-color: rgb(var(--secondary));
+  background-color: var(--secondary) !important;
+  border-color: var(--secondary);
 }
 
 .bg-primary {
-  background-color: rgb(var(--primary)) !important;
+  background-color: var(--primary) !important;
 }
 
 .badge {
